@@ -34,8 +34,15 @@ $matches=[
     ],
 
 ];
+//stampa con ciclo
 
+    foreach ($matches as $nome_squadra => $squadra) {
+        $squadra++;
+    }
+    var_dump($matches);
  ?>
+
+<!-- stampa senza ciclo -->
 
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
@@ -44,11 +51,8 @@ $matches=[
          <title></title>
      </head>
      <body>
-         <?php var_dump($matches['partita1']); ?> <br>
-         <?php var_dump($matches['partita2']); ?> <br>
+         <?php var_dump($matches['partita1']); ?>
          <?php var_dump($matches['partita2']); ?>
-
-
-
+         <?php var_dump($matches['partita2']); ?>
      </body>
  </html>
