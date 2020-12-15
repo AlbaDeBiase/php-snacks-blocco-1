@@ -12,34 +12,32 @@ Olimpia Milano - Cantù | 55 - 60 -->
 <?php
 
 $matches=[
-    'partita1'=>[
-    'squadra di casa' => 'Milan',
-    'squadra ospite' => 'Inter',
-    'punti fatti dalla squadra di casa'=>'55',
-    'punti fatti dalla squadra ospite'=>'60'
+    [
+    'squadra_di_casa' => 'Milan',
+    'squadra_ospite' => 'Inter',
+    'punti_fatti_dalla_squadra_di_casa'=>'55',
+    'punti_fatti_dalla_squadra_ospite'=>'60'
     ],
 
-    'partita2'=>[
-    'squadra di casa' => 'Lazio',
-    'squadra ospite' => 'Roma',
-    'punti fatti dalla squadra di casa'=>'45',
-    'punti fatti dalla squadra ospite'=>'10'
+    [
+    'squadra_di_casa' => 'Lazio',
+    'squadra_ospite' => 'Roma',
+    'punti_fatti_dalla_squadra_di_casa'=>'45',
+    'punti_fatti_dalla_squadra_ospite'=>'10'
     ],
 
-    'partita3'=>[
-    'squadra di casa' => 'Juventus',
-    'squadra ospite' => 'Torino',
-    'punti fatti dalla squadra di casa'=>'45',
-    'punti fatti dalla squadra ospite'=>'10'
+    [
+    'squadra_di_casa' => 'Juventus',
+    'squadra_ospite' => 'Torino',
+    'punti_fatti_dalla_squadra_di_casa'=>'45',
+    'punti_fatti_dalla_squadra_ospite'=>'10'
     ],
 
 ];
 //stampa con ciclo
 
-    foreach ($matches as $nome_squadra => $squadra) {
-        $squadra++;
-    }
-    var_dump($matches);
+
+
  ?>
 
 <!-- stampa senza ciclo -->
@@ -51,8 +49,15 @@ $matches=[
          <title></title>
      </head>
      <body>
-         <?php var_dump($matches['partita1']); ?>
-         <?php var_dump($matches['partita2']); ?>
-         <?php var_dump($matches['partita2']); ?>
+         <h1>
+         <?php
+
+         foreach ($matches as $partita) {
+
+             echo $partita['squadra_di_casa'] . " " . "-" . " " . $partita['squadra_ospite'] . " ". "|" ." " . $partita['punti_fatti_dalla_squadra_di_casa'] . " " . "-" . " " .
+               $partita['punti_fatti_dalla_squadra_ospite'] . "<br>";
+         }
+          ?>
+          </h1>
      </body>
  </html>
