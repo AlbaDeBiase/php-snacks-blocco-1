@@ -7,6 +7,8 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 
 <?php
 
+// query string
+// leggo i parametri get
 $name = $_GET['name'];
 $email = $_GET['email'];
 $age = $_GET['age'];
@@ -16,12 +18,12 @@ $age = $_GET['age'];
 
 
 
-// cerco il punto e la chiocciola nella email
-if(strpos($email, '.') !== false && strpos($email, '@') !== false && (strlen($name)>3) !== false && is_numeric($age)) {
-    // se ci sono entrambi, stampo "OK"
+//verifico che il nome sia maggiore di 3 caratteri, cerco il punto e la chiocciola nella email , verifico che age sia un numero
+if(strpos($email, '.') !== false && strpos($email, '@') !== false && (strlen($name)>3) !== false && is_numeric($age)!== false && $age> 0) {
+    // se ci sono tutti, stampo "Accesso riuscito"
     echo "Accesso riuscito";
 } else {
-    // altrimenti, stampo "KO"
+    // altrimenti, stampo "accesso negato"
     echo "accesso negato";
 }
 
